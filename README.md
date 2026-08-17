@@ -59,6 +59,68 @@ To use an existing usrsctp source tree instead:
 .\build-windows.ps1 -UsrsctpSource C:\path\to\usrsctp
 ```
 
+## Linux build
+
+Requirements:
+
+- Python development environment
+- C/C++ build tools
+- CMake
+- Git
+
+From this repository:
+
+```bash
+./build-linux.sh
+```
+
+To select a Python interpreter:
+
+```bash
+PYTHON=python3.12 ./build-linux.sh
+```
+
+To use an existing usrsctp source tree:
+
+```bash
+./build-linux.sh /path/to/usrsctp
+```
+
+Everything is built under `.build/`; the wheel is written to `dist/`, then
+installed into the selected Python environment and smoke-tested.
+
+## macOS build
+
+Requirements:
+
+- Python development environment
+- Xcode Command Line Tools
+- CMake
+- Git
+
+From this repository:
+
+```bash
+./build-macos.sh
+```
+
+The script builds for the current machine architecture (`arm64` or `x86_64`).
+You can override the interpreter or architecture when needed:
+
+```bash
+PYTHON=python3.12 ./build-macos.sh
+ARCH=arm64 ./build-macos.sh
+```
+
+To use an existing usrsctp source tree:
+
+```bash
+./build-macos.sh /path/to/usrsctp
+```
+
+If `MACOSX_DEPLOYMENT_TARGET` is already set, the same target is passed to the
+usrsctp CMake build and the Python wheel build environment.
+
 ## Build manually
 
 If usrsctp is already installed somewhere:
