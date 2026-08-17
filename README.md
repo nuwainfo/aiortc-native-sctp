@@ -59,9 +59,6 @@ To use an existing usrsctp source tree instead:
 .\build-windows.ps1 -UsrsctpSource C:\path\to\usrsctp
 ```
 
-The paths used for build and install are under this repository; no fixed
-`C:\dev\...` path is required.
-
 ## Build manually
 
 If usrsctp is already installed somewhere:

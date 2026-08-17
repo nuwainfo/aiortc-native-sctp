@@ -26,10 +26,12 @@ extension.
 
 from __future__ import annotations
 
+import os
 import asyncio
 import logging
 import time
 import weakref
+
 from collections import deque
 from typing import Deque, Optional
 
