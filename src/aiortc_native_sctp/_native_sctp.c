@@ -16,6 +16,10 @@
 
 #include <usrsctp.h>
 
+#ifndef MSG_EOR
+#define MSG_EOR 0x80
+#endif
+
 /*
  * CPython glue around usrsctp for aiortc DataChannels.
  *
